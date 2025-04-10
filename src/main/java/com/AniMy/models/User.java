@@ -1,11 +1,12 @@
 package com.AniMy.models;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,7 +15,25 @@ import lombok.Setter;
 public class User {
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
+
+    @Column(
+        unique = true,
+        nullable = false
+    )
     private String username;
+
+    @Column(nullable = false)
     private String password;
+
+    @Column(
+        unique = true,
+        nullable = false
+    )
+    private String email;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private UserRoles role;
+
 }
