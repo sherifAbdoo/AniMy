@@ -1,4 +1,4 @@
-package com.AniMy.demo.models;
+package com.AniMy.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -14,7 +14,7 @@ import lombok.Setter;
 public class User {
     @Id
     @GeneratedValue
-    long id;
-    String name;
-    String password;
+    private Long id;
+    private String username;
+    private String password;
 }
