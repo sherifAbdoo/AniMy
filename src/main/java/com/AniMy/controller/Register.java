@@ -3,6 +3,7 @@ package com.AniMy.controller;
 import com.AniMy.services.RegistrationService;
 import com.AniMy.utils.registerRequest;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,12 +14,12 @@ public class Register {
     private RegistrationService registrationService;
 
     @GetMapping
-    public String hello(){
-        return "Hello from Register";
+    public String getRegistrationStatus() {
+        return "hello";
     }
 
     @PostMapping
-    public String registerUser(@RequestBody registerRequest request) {
+    public ResponseEntity<String> registerUser(@RequestBody registerRequest request) {
         return registrationService.register(request);
     }
 
