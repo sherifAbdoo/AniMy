@@ -1,6 +1,7 @@
 package com.AniMy.models;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
+@EqualsAndHashCode
 public class Anime {
     @Id
     @GeneratedValue
