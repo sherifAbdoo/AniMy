@@ -8,4 +8,6 @@ public class RegistrationMsg {
     public static final String EMAIL_NOT_VALID = "Invalid email address.";
     public static final String USER_REGISTRATION_SUCCESS = "User registration successful.";
 
+    public static final String INVALID_TOKEN = "Invalid token.";
+    public static final String EXPIRED_TOKEN = "Token has expired.";
 }
