@@ -39,7 +39,6 @@ public class RegistrationService {
     }
 
     public ResponseEntity<ApiResponse<String>> confirmToken(String token){
-        System.out.println("confirming token from Regservice: " + token);
         return emailConfirmationService.confirmToken(token);
     }
 }
